@@ -1,0 +1,14 @@
+{
+  "name": "evan-toolkit",
+  "owner": {
+    "name": "Evan O'Connor"
+  },
+  "plugins": [
+    {
+      "name": "evan-toolkit",
+      "source": "./plugins/evan-toolkit",
+      "description": "Evan's personal Claude Code skills, agents and commands, shared by Claude on the Mac, Claude cloud and Terry."
+    }
+  ],
+  "description": "Evan's personal Claude Code toolkit"
+}

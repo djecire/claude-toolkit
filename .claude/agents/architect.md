@@ -1,0 +1,1 @@
+../../plugins/evan-toolkit/agents/architect.md

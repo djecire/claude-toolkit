@@ -1,0 +1,1 @@
+../../plugins/evan-toolkit/agents/docs-lookup.md

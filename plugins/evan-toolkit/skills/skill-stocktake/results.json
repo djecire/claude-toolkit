@@ -1,0 +1,471 @@
+{
+  "evaluated_at": "2026-07-09T23:33:08Z",
+  "mode": "full",
+  "batch_progress": {
+    "total": 58,
+    "evaluated": 58,
+    "status": "completed"
+  },
+  "consolidation": {
+    "executed_at": "2026-07-09T17:28:56Z",
+    "archive_dir": "~/.claude/skills-archive/2026-07-09/",
+    "live_count": 58,
+    "archived_count": 25,
+    "retired": 14,
+    "merged": 11,
+    "improved": 25,
+    "reversible": "move-only; restore by moving dirs back from archive_dir"
+  },
+  "skills": {
+    "agent-introspection-debugging": {
+      "path": "~/.claude/skills/agent-introspection-debugging/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Concrete 4-phase capture/diagnose/recover/report workflow with templates and an agent-failure pattern table (max-tool-calls, 429 storms); explicitly scoped away from verification-loop and systematic-debugging.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "agent-sort": {
+      "path": "~/.claude/skills/agent-sort/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Well-scoped ECC curation workflow with DAILY/LIBRARY buckets, rg/cat evidence commands, and explicit handoffs to configure-ecc/skill-stocktake that defuse its own collisions.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "ai-regression-testing": {
+      "path": "~/.claude/skills/ai-regression-testing/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Distinct concrete content: Vitest+Next.js route-testing harness, sandbox/production parity tests, four named AI regression patterns with code. Not covered by testing.md (process-only). Minor: references a /bug-check command it defines inline.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "api-connector-builder": {
+      "path": "~/.claude/skills/api-connector-builder/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Clear 'one more integration, match the house style' trigger with example prompts, anti-cargo-cult guardrails, and a quality checklist; 120 lines, not duplicated elsewhere.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "article-writing": {
+      "path": "~/.claude/skills/article-writing/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Tight 79-line editorial stance (banned patterns, proof-before-explanation, per-format structure); correctly delegates voice derivation to brand-voice instead of duplicating it.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "backend-patterns": {
+      "path": "~/.claude/skills/backend-patterns/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] 598 lines with usable TS snippets, but Repository/envelope sections duplicate always-loaded patterns.md and API sections triple-cover api-design/coding-standards. Description rewritten 2026-07-09 with Use-when + NOT-for clauses; body dedup still pending.",
+      "mtime": "2026-07-09T17:27:57Z"
+    },
+    "blueprint": {
+      "path": "~/.claude/skills/blueprint/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] Excellent TRIGGER/DO-NOT-TRIGGER description but body was a project README (Installation/Key Features, nothing executable). Body rewritten 2026-07-09 into a 5-phase executable workflow with gate, plan-file template, review anti-pattern catalog, 2-round review cap, and mutation protocol.",
+      "mtime": "2026-07-09T01:27:48Z"
+    },
+    "brand-voice": {
+      "path": "~/.claude/skills/brand-voice/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] Solid extraction workflow, but Downstream Use cites four nonexistent skills (content-engine, crosspost, lead-intelligence, x-api), hardcodes an irrelevant 'Affaan/ECC' persona, and the name collides with the installed brand-voice plugin. Strip dead refs, disambiguate from plugin.",
+      "mtime": "2026-07-09T01:38:05Z"
+    },
+    "claude-api": {
+      "path": "~/.claude/skills/claude-api/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] Concrete SDK snippets, but the model table is two generations stale (Opus 4.1/Sonnet 4/Haiku 3.5) — actively causes wrong code. Refresh models or defer to docs-lookup/claude-code-guide agents.",
+      "mtime": "2026-07-09T01:40:58Z"
+    },
+    "claude-devfleet": {
+      "path": "~/.claude/skills/claude-devfleet/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Tool-accurate operating manual for the DevFleet MCP: full tool table, three worked workflows, real gotchas (wait_for_mission blocks; drafts without auto_dispatch). Not reproducible from general knowledge.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "code-tour": {
+      "path": "~/.claude/skills/code-tour/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Unique niche, zero collisions: CodeTour .tour JSON with all six step types, anchor-verification workflow, When-NOT-to-Use section.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "codex-review": {
+      "path": "~/.claude/skills/codex-review/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Highest-precision skill: exact CLI incantations with verified sandbox-mode safety note, bounded MAX_ROUNDS loop, human gates; description explicitly disambiguates the grill-me family.",
+      "mtime": "2026-06-05T21:33:36Z"
+    },
+    "configure-ecc": {
+      "path": "~/.claude/skills/configure-ecc/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Genuinely executable installer with AskUserQuestion flows, cp/mkdir commands, path/cross-reference verification, troubleshooting; load-bearing target of agent-sort's handoff.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "content-hash-cache-pattern": {
+      "path": "~/.claude/skills/content-hash-cache-pattern/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Narrow but complete: working chunked SHA-256 Python, service-layer wrapper, design-rationale table, honest When-NOT-to-Use. Nothing else covers content-hash caching.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "continuous-agent-loop": {
+      "path": "~/.claude/skills/continuous-agent-loop/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] Designated canonical loop skill but currently a 45-line stub referencing nonexistent nanoclaw-repl; must absorb autonomous-loops' 610 lines of reference implementations and ralphinho's unit-spec/merge-queue sections, then own the loop trigger space alone.",
+      "mtime": "2026-07-09T01:37:52Z"
+    },
+    "continuous-learning-v2": {
+      "path": "~/.claude/skills/continuous-learning-v2/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Real system with verified files (hooks/observe.sh, scripts/instinct-cli.py, agents/observer.md); currently inert (hook not wired, observer.enabled=false) but the skill is the only install/ops guide for it.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "council": {
+      "path": "~/.claude/skills/council/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] Useful anti-anchoring mechanism (fresh subagents get only the question), concrete prompt template, When-NOT-to-Use table. Defect to fix opportunistically: cites nonexistent santa-method and architecture-decision-records skills.",
+      "mtime": "2026-07-09T01:37:42Z"
+    },
+    "dashboard-builder": {
+      "path": "~/.claude/skills/dashboard-builder/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Distinct operator-question-driven Grafana/SigNoz niche, clearly separated from data:build-dashboard; body thin (no example JSON) but acceptable as steering.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "database-migrations": {
+      "path": "~/.claude/skills/database-migrations/SKILL.md",
+      "verdict": "Keep",
+      "reason": "High-value reference across 6 toolchains with the load-bearing nuances Claude gets wrong from memory (CONCURRENTLY vs transactions, Postgres 11+ instant defaults, expand-contract timeline).",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "deep-research": {
+      "path": "~/.claude/skills/deep-research/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] Good decomposition/cite workflow but hard-wired to unconfigured firecrawl/exa MCPs while unmentioning available WebSearch/WebFetch. Designated survivor of the research family: absorb exa-search's parameter appendix, research-ops' lane classification and evidence-boundary labeling, market-research's four mode checklists.",
+      "mtime": "2026-07-09T01:36:31Z"
+    },
+    "deployment-patterns": {
+      "path": "~/.claude/skills/deployment-patterns/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-10] Now sole owner of production Docker images (multi-stage Node/Go/Python builds, Docker Best Practices); docker-patterns points here. Description gained Use-when + NOT-for clauses.",
+      "mtime": "2026-07-09T23:33:08Z"
+    },
+    "docker-patterns": {
+      "path": "~/.claude/skills/docker-patterns/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-10] Deduped vs deployment-patterns: production build/production Dockerfile stages and image-hardening list replaced with ownership pointers; now owns local-dev compose exclusively (dev stages, overrides, networking, volumes, compose security, debugging). Description rewritten with Use-when + NOT-for.",
+      "mtime": "2026-07-09T23:33:08Z"
+    },
+    "e2e-testing": {
+      "path": "~/.claude/skills/e2e-testing/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] Concrete Playwright value (CI-aware config, POM, flaky triage, artifacts). Cut two leftover project-specific sections (Wallet/Web3, prediction-market flows) betraying copy-paste origin.",
+      "mtime": "2026-07-09T01:37:34Z"
+    },
+    "email-ops": {
+      "path": "~/.claude/skills/email-ops/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] Matches the user's real Gmail MCP + dedicated billing inbox; the never-claim-sent-without-Sent-proof guardrails are the value. Defect: cites nonexistent investor-outreach skill.",
+      "mtime": "2026-07-09T01:37:50Z"
+    },
+    "eval-harness": {
+      "path": "~/.claude/skills/eval-harness/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] Body earns its keep (grader types with runnable bash, pass@k vs pass^k thresholds, .claude/evals layout, backs /eval). Description was a triggerless fragment — rewritten 2026-07-09 with Use-when phrases and NOT-for disambiguation.",
+      "mtime": "2026-07-09T01:27:01Z"
+    },
+    "finance-billing-ops": {
+      "path": "~/.claude/skills/finance-billing-ops/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] Keeper of the billing pair: revenue-fact vs code-backed-truth discipline is genuinely valuable. Absorb customer-billing-ops' classification table. Caveat: Stripe-framed while user's stack is Xero.",
+      "mtime": "2026-07-09T01:40:07Z"
+    },
+    "frontend-design": {
+      "path": "~/.claude/skills/frontend-design/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Taste-steering that measurably changes output (commit to a direction, anti-pattern list, quality gate); clear trigger separating it from frontend-patterns' code focus.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "frontend-slides": {
+      "path": "~/.claude/skills/frontend-slides/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Best-in-class: precise trigger, hard non-negotiables (zero-dep single file, 100dvh viewport gate), PPTX conversion path, STYLE_PRESETS.md verified present. Distinct from anthropic-skills:pptx.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "github-ops": {
+      "path": "~/.claude/skills/github-ops/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Covers what always-loaded git-workflow.md does not: triage taxonomy with gh commands, stale thresholds, CI failure triage, release/Dependabot API calls. project-flow-ops owns the GitHub+Linear coordination case above it.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "google-workspace-ops": {
+      "path": "~/.claude/skills/google-workspace-ops/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] Proper trigger, but the 95-line body is tool-free prose with zero bindings to the actually-connected Drive MCP and assumes unconnected Docs/Sheets editing surfaces. Keep the ASSET/CURRENT STATE/ACTION format, bind steps to real tools.",
+      "mtime": "2026-07-09T01:38:35Z"
+    },
+    "grill-me-codex": {
+      "path": "~/.claude/skills/grill-me-codex/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] Best-in-class trigger spec resolving the three-way Codex family; fully executable body with verified CLI commands, sandbox safety line, MAX_ROUNDS; the Codex-approval workflow is in active use per memory.",
+      "mtime": "2026-07-09T01:36:47Z"
+    },
+    "hookify-rules": {
+      "path": "~/.claude/skills/hookify-rules/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Precise trigger that can't misfire on generic hook questions; tight 128-line syntax reference; the hookify plugin is present so the companion reference is live.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "jira-integration": {
+      "path": "~/.claude/skills/jira-integration/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Fires only on Jira mentions; actionable body (mcp-atlassian setup, working curl with correct ADF payloads, troubleshooting table). Caveat: user's stack is GitHub+Linear — verify Jira is ever touched before keeping long-term.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "knowledge-ops": {
+      "path": "~/.claude/skills/knowledge-ops/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] Good triggers, but Layer 3 prescribes an unconnected MCP memory server's tools and Layer 5 (Supabase) is speculative; ignores the built-in auto-memory actually in use. Rewrite around layers that exist.",
+      "mtime": "2026-07-09T01:38:07Z"
+    },
+    "liquid-glass-design": {
+      "path": "~/.claude/skills/liquid-glass-design/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Self-scoping terms (iOS 26, glassEffect) with no collision risk; dense concrete API reference (GlassEffectContainer, UIGlassEffect, widget accented mode) — recent-API material where a skill beats model memory.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "messages-ops": {
+      "path": "~/.claude/skills/messages-ops/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] Sharp trigger, correctly disambiguated from email-ops, but Skill Stack cites two nonexistent skills (connections-optimizer, lead-intelligence) and never binds to the connected iMessage MCP tools. Fix refs, add tool bindings, keep SOURCE/RESULT/STATUS format.",
+      "mtime": "2026-07-09T01:38:46Z"
+    },
+    "nestjs-patterns": {
+      "path": "~/.claude/skills/nestjs-patterns/SKILL.md",
+      "verdict": "Keep",
+      "reason": "'NestJS' self-triggers reliably without collision; production defaults (whitelist ValidationPipe, exception-filter envelope, boot-time config validation), no broken refs.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "nutrient-document-processing": {
+      "path": "~/.claude/skills/nutrient-document-processing/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Fully executable curl /build invocations for convert/OCR/redact/sign; uniquely covers format conversion and preset PII redaction vs the PDF Tools MCP. Caveat: requires NUTRIENT_API_KEY not present in env.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "product-capability": {
+      "path": "~/.claude/skills/product-capability/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] Real distinct lane (capability contract before multi-service work), but the canonical template path docs/examples/product-capability-template.md does not exist — executor dead-ends. Inline the template, de-jargon the trigger.",
+      "mtime": "2026-07-09T01:39:08Z"
+    },
+    "project-flow-ops": {
+      "path": "~/.claude/skills/project-flow-ops/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Environment-true (GitHub public / Linear internal is the user's actual model); decision-enabling classification table and review rules; owns the coordination layer above github-ops.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "prompt-optimizer": {
+      "path": "~/.claude/skills/prompt-optimizer/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] Exemplary TRIGGER/DO-NOT-TRIGGER spec (incl. Chinese equivalents), but the 397-line body rotted: Phase 3 hardcodes 15+ uninstalled skills and stale model names. Rewrite Phase 3 to enumerate installed components dynamically; cut the three long examples.",
+      "mtime": "2026-07-09T17:27:56Z"
+    },
+    "regex-vs-llm-structured-text": {
+      "path": "~/.claude/skills/regex-vs-llm-structured-text/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Self-contained decision framework with working Python (parser, confidence scorer, hybrid pipeline) and real production metrics; narrow enough not to collide.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "security-bounty-hunter": {
+      "path": "~/.claude/skills/security-bounty-hunter/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Clearly differentiated from the security trio: bounty/exploitability triage with in-scope CWE table, skip-list, PoC gate, report structure; concise and actionable.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "security-review": {
+      "path": "~/.claude/skills/security-review/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] Useful 495-line checklist beyond the always-loaded security.md, but the description collides head-on with the built-in /security-review command and security-reviewer agent, and section 9 (Solana/blockchain) is irrelevant here. Disambiguate description as the coding-pattern checklist; trim blockchain.",
+      "mtime": "2026-07-09T01:36:55Z"
+    },
+    "security-scan": {
+      "path": "~/.claude/skills/security-scan/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Distinct scope (audits the .claude/ config surface via AgentShield CLI with exact npx commands); no overlap with security-review (app code) or security-bounty-hunter (repo exploits).",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "seo": {
+      "path": "~/.claude/skills/seo/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] Solid actionable SEO skill; only defect is a dangling Related Skills reference to nonexistent seo-specialist. One-line fix, otherwise keep as-is.",
+      "mtime": "2026-07-09T01:37:33Z"
+    },
+    "skill-stocktake": {
+      "path": "~/.claude/skills/skill-stocktake/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-10] scan.sh fixed: find -L follows symlinked skill dirs (supabase pair was invisible), python frontmatter parser handles folded scalars/nested keys/BOM/CRLF, \\x1f TSV transport preserves empty names; quick-diff.sh synced; SKILL.md gained its missing name: field. Verified: 59 named skills, no bogus entries.",
+      "mtime": "2026-07-09T23:33:08Z"
+    },
+    "social-graph-ranker": {
+      "path": "~/.claude/skills/social-graph-ranker/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] Concrete weighted bridge-scoring model with defined constants — not generic knowledge. Caveat: three of four Related Skills point into a phantom ecosystem (lead-intelligence, connections-optimizer, x-api all missing), but stands alone.",
+      "mtime": "2026-07-09T01:38:57Z"
+    },
+    "strategic-compact": {
+      "path": "~/.claude/skills/strategic-compact/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] Real value in the compaction decision guide, but documented hook path suggest-compact.js does not exist (dir ships .sh; settings.json wires a different script) and the token-optimization tail references missing skills/MCPs. Fix path, prune tail.",
+      "mtime": "2026-07-09T01:38:23Z"
+    },
+    "supabase": {
+      "path": "~/.claude/skills/supabase/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Official Supabase-authored skill with exemplary explicit trigger list; core principles (verify against current docs, RLS by default) plus references/assets present. Missed by scan.sh due to frontmatter parsing bug.",
+      "mtime": "2026-04-16T23:30:35Z"
+    },
+    "supabase-postgres-best-practices": {
+      "path": "~/.claude/skills/supabase-postgres-best-practices/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] Official Supabase 8-category Postgres performance reference set (64-line router + references/); designated merge target for postgres-patterns' cheat-sheet tables. Missed by scan.sh due to frontmatter parsing bug.",
+      "mtime": "2026-07-09T01:40:22Z"
+    },
+    "tdd-workflow": {
+      "path": "~/.claude/skills/tdd-workflow/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] Overlaps always-loaded testing.md AND /tdd AND tdd-guide agent AND superpowers:test-driven-development. Unique contribution is the RED/GREEN git-checkpoint gate (~115 lines); cut the ~300 lines of generic Jest/Playwright boilerplate and retarget the description away from testing.md's wording.",
+      "mtime": "2026-07-09T01:37:21Z"
+    },
+    "team-builder": {
+      "path": "~/.claude/skills/team-builder/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Concrete interactive workflow (dynamic agent discovery, max-5 enforcement, parallel dispatch, synthesis); distinct from council's fixed four voices. Description thin but 'team builder' self-triggers.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "terminal-ops": {
+      "path": "~/.claude/skills/terminal-ops/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Tight 109-line evidence-first execution workflow; the status-word discipline (inspected/changed/verified/committed/pushed/blocked) is its distinctive contribution.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "ui-demo": {
+      "path": "~/.claude/skills/ui-demo/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Fully self-contained Playwright demo-video production (complete working helpers: injectCursor, moveAndClick, subtitle bar); no collision — e2e-testing is assertions, this is video. Length is working code.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "unified-notifications-ops": {
+      "path": "~/.claude/skills/unified-notifications-ops/SKILL.md",
+      "verdict": "Keep",
+      "reason": "Coherent capture/classify/route/collapse workflow with a concrete severity model; all cross-refs exist; explicitly delegates backlog coordination to project-flow-ops.",
+      "mtime": "2026-04-13T17:44:58Z"
+    },
+    "verification-loop": {
+      "path": "~/.claude/skills/verification-loop/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] Reasonable six-phase build/type/lint/test/security/diff sequence, but the description was a triggerless one-liner colliding with /verify and /quality-gate. Description rewritten 2026-07-09 with explicit triggers and NOT-for clauses; consider deduping body against code-review.md later.",
+      "mtime": "2026-07-09T01:26:57Z"
+    },
+    "workspace-surface-audit": {
+      "path": "~/.claude/skills/workspace-surface-audit/SKILL.md",
+      "verdict": "Keep",
+      "reason": "[improved 2026-07-09] Read-only environment-audit with secrets-safe rule and clear 5-section output; occupies the 'what can this environment do right now' niche vs agent-sort/configure-ecc's install/trim. Absorbs automation-audit-ops' taxonomy as an audit mode.",
+      "mtime": "2026-07-09T01:40:32Z"
+    }
+  },
+  "archived": {
+    "agent-harness-construction": {
+      "action": "Retired (archived 2026-07-09)",
+      "reason": "73 lines of abstract agent-design bullets, no commands or workflow; context/model guidance duplicates always-loaded performance.md; overlaps agentic-engineering, harness-optimizer agent, /harness-audit. Topic-statement description would rarely fire."
+    },
+    "agentic-engineering": {
+      "action": "Retired (archived 2026-07-09)",
+      "reason": "63 lines of identity prose; model-routing duplicates always-loaded performance.md, eval-first covered by eval-harness, decomposition by blueprint/planner, review bullets by code-review.md. Vague description would never win selection."
+    },
+    "ai-first-engineering": {
+      "action": "Retired (archived 2026-07-09)",
+      "reason": "51 lines, near-duplicate of agentic-engineering plus an org-design 'Hiring Signals' section no agent can act on; review/testing bullets duplicate always-loaded code-review.md and testing.md."
+    },
+    "coding-standards": {
+      "action": "Retired (archived 2026-07-09)",
+      "reason": "549 lines restating always-loaded rules: immutability/KISS/naming duplicate coding-style.md, AAA section reuses testing.md's exact calculateCosineSimilarity example, envelope duplicates patterns.md. Its own header concedes the rule layer supersedes it."
+    },
+    "ecc-tools-cost-audit": {
+      "action": "Retired (archived 2026-07-09)",
+      "reason": "Entire skill scoped to a sibling ECC-Tools repo verified absent from this machine — mandated step 1 cannot execute. Transferable billing-audit ideas already covered by finance-billing-ops and automation-audit-ops."
+    },
+    "enterprise-agent-ops": {
+      "action": "Retired (archived 2026-07-09)",
+      "reason": "50 lines of contentless SRE bullets, zero commands or file references; vague description would never be selected over autonomous-loops/continuous-agent-loop/harness-audit."
+    },
+    "frontend-patterns": {
+      "action": "Retired (archived 2026-07-09)",
+      "reason": "642 lines of stock React Claude produces natively; teaches a hand-rolled useQuery contradicting its own SWR/React-Query activation line and the user's search-first rule. vercel:react-best-practices/vercel:nextjs cover current guidance."
+    },
+    "iterative-retrieval": {
+      "action": "Retired (archived 2026-07-09)",
+      "reason": "Triggerless topic label; 211 lines of non-executable pseudocode (fictional scoreRelevance/identifyGaps functions) wrapping a pattern Claude performs natively and the Explore agent institutionalizes."
+    },
+    "mcp-server-patterns": {
+      "action": "Retired (archived 2026-07-09)",
+      "reason": "Body repeatedly punts to Context7/official docs and teaches little beyond npm install; its one internal link is broken (capability-surface-selection.md absent). anthropic-skills:mcp-builder covers the need."
+    },
+    "plankton-code-quality": {
+      "action": "Retired (archived 2026-07-09)",
+      "reason": "Documents a third-party hook system verified not installed (no multi_linter.sh or plankton config anywhere under ~/.claude); 236 lines of inert reference. Upstream REFERENCE.md is canonical if ever installed."
+    },
+    "python-patterns": {
+      "action": "Retired (archived 2026-07-09)",
+      "reason": "750 lines of textbook Python (EAFP, dataclasses, decorators) Claude knows cold, taxing context on every Python task; duplicates coding-style.md and the python-reviewer agent. Only the ruff/pyproject fragment is semi-durable."
+    },
+    "python-testing": {
+      "action": "Retired (archived 2026-07-09)",
+      "reason": "816 lines (breaching the user's own 800-line cap) of generic pytest syntax; TDD/coverage/AAA sections verbatim-duplicate always-loaded testing.md; tdd-workflow and tdd-guide own the workflow trigger."
+    },
+    "search-first": {
+      "action": "Retired (archived 2026-07-09)",
+      "reason": "Duplicates always-loaded development-workflow.md step 0 'Research & Reuse' clause-for-clause (GitHub search first, registries, prefer OSS); references a nonexistent researcher agent. In every session already."
+    },
+    "token-budget-advisor": {
+      "action": "Retired (archived 2026-07-09)",
+      "reason": "Novelty depth-menu built on a self-admitted fake tokenizer; references context-budget as a sibling skill when it's a command; adds an interactive friction step with no payoff for this workspace."
+    },
+    "autonomous-loops": {
+      "action": "Merged into continuous-agent-loop (archived 2026-07-09)",
+      "reason": "Self-declared deprecated ('canonical skill name is now continuous-agent-loop') but holds all the substance (610 lines: pipeline scripts, de-sloppify, continuous PR loop). Move reference implementations into the 45-line successor stub, then delete."
+    },
+    "ralphinho-rfc-pipeline": {
+      "action": "Merged into continuous-agent-loop (archived 2026-07-09)",
+      "reason": "67-line skeleton (stage names, unit-spec template, 3 merge-queue bullets) with zero executable detail; the loop family already claims this territory. Carry over only the Unit Spec Template and Merge Queue Rules."
+    },
+    "exa-search": {
+      "action": "Merged into deep-research (archived 2026-07-09)",
+      "reason": "Parameter reference for an unconfigured Exa MCP; 'Use when the user needs web search' collides with everything. Fold parameter tables and config snippet into deep-research as an appendix."
+    },
+    "research-ops": {
+      "action": "Merged into deep-research (archived 2026-07-09)",
+      "reason": "A 112-line router over three other research skills — a fourth competitor for the word 'research'; cites nonexistent lead-intelligence. Fold lane classification and evidence-boundary labeling into deep-research as a routing preamble."
+    },
+    "market-research": {
+      "action": "Merged into deep-research (archived 2026-07-09)",
+      "reason": "75 lines of mode checklists with no tool bindings; near-total trigger overlap with the research family. Carry the four research-mode checklists and quality gate into the consolidated deep-research as domain modes."
+    },
+    "grill-with-docs-codex": {
+      "action": "Merged into grill-me-codex (archived 2026-07-09)",
+      "reason": "Its entire ACT 2 (~55 lines) is a verbatim copy of grill-me-codex's; only the Act 1 docs layer (CONTEXT.md glossary, ADR three-part test, format files) is unique. Carry that over as an optional 'docs mode'."
+    },
+    "customer-billing-ops": {
+      "action": "Merged into finance-billing-ops (archived 2026-07-09)",
+      "reason": "finance-billing-ops declares itself the superset; two Stripe-centric billing skills cross-fire on triggers. Carry over the issue-classification table and CUSTOMER/BILLING STATE/DECISION output format. User's live billing surface is Xero, not Stripe."
+    },
+    "api-design": {
+      "action": "Merged into backend-patterns (archived 2026-07-09)",
+      "reason": "523 lines of generic REST knowledge Claude knows cold; triple overlap with backend-patterns' own API section, coding-standards, and the always-loaded patterns.md envelope rule. Carry over only the cursor-vs-offset table and error-response format."
+    },
+    "postgres-patterns": {
+      "action": "Merged into supabase-postgres-best-practices (archived 2026-07-09)",
+      "reason": "Source-level collision (footer: 'Based on Supabase Agent Skills'); both trigger on every Postgres task. Carry the good cheat-sheet tables (SKIP LOCKED queue, unindexed-FK/bloat SQL) into the Supabase reference set. Also cites nonexistent clickhouse-io skill."
+    },
+    "automation-audit-ops": {
+      "action": "Merged into workspace-surface-audit (archived 2026-07-09)",
+      "reason": "Both inventory the same surface (hooks, MCP, connectors, CI); it even lists workspace-surface-audit as a component of itself. Fold the live-state taxonomy and keep/merge/cut/fix-next verdict format in as an 'audit mode'."
+    },
+    "cost-aware-llm-pipeline": {
+      "action": "Merged into claude-api (archived 2026-07-09)",
+      "reason": "Good routing-threshold and CostTracker code, but caching/retry sections duplicate claude-api's scope and the tier table duplicates always-loaded performance.md. Carry select_model thresholds and CostTracker in as a cost-control section."
+    }
+  }
+}
