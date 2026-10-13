@@ -24,7 +24,7 @@ except Exception:
     d = {}
 cmd = 'for d in /home/user/*/.agents/skills; do [ -d "$d" ] && cp -rL "$d/." ~/.claude/skills/; done; true'
 ss = d.setdefault('hooks', {}).setdefault('SessionStart', [])
-if not any(cmd in json.dumps(h) for h in ss):
+if not any(x.get('command') == cmd for h in ss for x in h.get('hooks', [])):
     ss.append({'hooks': [{'type': 'command', 'command': cmd}]})
 os.makedirs(os.path.dirname(p), exist_ok=True)
 json.dump(d, open(p, 'w'), indent=2)
