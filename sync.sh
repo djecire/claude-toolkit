@@ -1,10 +1,10 @@
 #!/bin/bash
 # Re-sync the PUBLIC toolkit from ~/.claude on Evan's Mac, then commit and push.
-# formal-audit is excluded (contains private EC audit history); EC skills live in ec-entertainment-v2.
+# formal-audit, audit-campaign and ec-enquiry-reply are excluded (private EC content).
 set -euo pipefail
 cd "$(dirname "$0")"
 P=plugins/evan-toolkit
-rsync -aL --delete --exclude '.git' --exclude 'synced' --exclude 'formal-audit' --exclude 'node_modules' --exclude '.DS_Store' --exclude '__pycache__' ~/.claude/skills/ "$P/skills/"
+rsync -aL --delete --exclude '.git' --exclude 'synced' --exclude 'formal-audit' --exclude 'audit-campaign' --exclude 'ec-enquiry-reply' --exclude 'node_modules' --exclude '.DS_Store' --exclude '__pycache__' ~/.claude/skills/ "$P/skills/"
 rsync -a --delete --exclude '.DS_Store' ~/.claude/agents/ "$P/agents/"
 rsync -a --delete --exclude '.DS_Store' ~/.claude/commands/ "$P/commands/"
 for d in "$P"/skills/*; do ln -sfn "../../$d" ".claude/skills/$(basename "$d")"; done
